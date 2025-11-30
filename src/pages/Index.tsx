@@ -1,15 +1,17 @@
 import { Hero } from "@/components/Hero";
-import { VideoSection } from "@/components/VideoSection";
 import { SocialProof } from "@/components/SocialProof";
+import { VideoSection } from "@/components/VideoSection";
 import { CTASection } from "@/components/CTASection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Hero />
-      <VideoSection />
       <SocialProof />
+      <VideoSection />
       <CTASection />
+      <Footer />
     </div>
   );
 };
