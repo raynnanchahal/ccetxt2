@@ -12,12 +12,6 @@ const Navigation = () => {
         
         <div className="flex items-center gap-6">
           <Link 
-            to="/" 
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-          >
-            Homepage
-          </Link>
-          <Link 
             to="/case-studies" 
             className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
           >
