@@ -1,7 +1,11 @@
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+
 const Terms = () => {
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-20 max-w-4xl">
+      <Navigation />
+      <div className="container mx-auto px-4 py-32 max-w-4xl">
         <h1 className="text-5xl font-black mb-8 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
           Terms and Conditions
         </h1>
@@ -145,6 +149,7 @@ const Terms = () => {
           </section>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

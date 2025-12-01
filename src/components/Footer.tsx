@@ -52,6 +52,31 @@ const Footer = () => {
                   Disclaimer
                 </Link>
               </li>
+              <li>
+                <Link to="/acceptable-use-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Acceptable Use Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/access-authorization-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Access & Authorization Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/cookies-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Cookies Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/disclosure-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Disclosure Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/refund-cancellation-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Refund & Cancellation Policy
+                </Link>
+              </li>
             </ul>
           </div>
 

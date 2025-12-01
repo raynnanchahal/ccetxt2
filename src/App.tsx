@@ -9,6 +9,11 @@ import CaseStudies from "./pages/CaseStudies";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Disclaimer from "./pages/Disclaimer";
+import AcceptableUsePolicy from "./pages/AcceptableUsePolicy";
+import AccessAuthorizationPolicy from "./pages/AccessAuthorizationPolicy";
+import CookiesPolicy from "./pages/CookiesPolicy";
+import DisclosurePolicy from "./pages/DisclosurePolicy";
+import RefundCancellationPolicy from "./pages/RefundCancellationPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +31,11 @@ const App = () => (
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/acceptable-use-policy" element={<AcceptableUsePolicy />} />
+          <Route path="/access-authorization-policy" element={<AccessAuthorizationPolicy />} />
+          <Route path="/cookies-policy" element={<CookiesPolicy />} />
+          <Route path="/disclosure-policy" element={<DisclosurePolicy />} />
+          <Route path="/refund-cancellation-policy" element={<RefundCancellationPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
