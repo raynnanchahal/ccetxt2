@@ -14,6 +14,7 @@ import AccessAuthorizationPolicy from "./pages/AccessAuthorizationPolicy";
 import CookiesPolicy from "./pages/CookiesPolicy";
 import DisclosurePolicy from "./pages/DisclosurePolicy";
 import RefundCancellationPolicy from "./pages/RefundCancellationPolicy";
+import ThankYou from "./pages/ThankYou";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/cookies-policy" element={<CookiesPolicy />} />
           <Route path="/disclosure-policy" element={<DisclosurePolicy />} />
           <Route path="/refund-cancellation-policy" element={<RefundCancellationPolicy />} />
+          <Route path="/thank-you" element={<ThankYou />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

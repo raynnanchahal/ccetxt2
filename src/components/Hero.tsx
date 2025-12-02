@@ -5,9 +5,9 @@ export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-primary/5 to-background">
       {/* Animated Gradient Orbs */}
-      <div className="absolute top-20 left-10 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-3xl animate-pulse delay-700" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000" />
+      <div className="absolute top-20 left-10 w-48 md:w-96 h-48 md:h-96 bg-primary/30 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-64 md:w-[500px] h-64 md:h-[500px] bg-secondary/20 rounded-full blur-3xl animate-pulse delay-700" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 md:w-[600px] h-72 md:h-[600px] bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000" />
       
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -32,16 +32,16 @@ export const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-5xl mx-auto space-y-8 animate-fade-in">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 border border-primary/30 backdrop-blur-xl shadow-lg hover:shadow-primary/20 transition-all duration-300">
-            <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-            <span className="text-sm font-semibold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          <div className="inline-flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 rounded-full bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 border border-primary/30 backdrop-blur-xl shadow-lg hover:shadow-primary/20 transition-all duration-300">
+            <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-primary animate-pulse" />
+            <span className="text-xs md:text-sm font-semibold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
               Where Creativity Meets Cybersecurity
             </span>
-            <Zap className="w-4 h-4 text-accent animate-pulse" />
+            <Zap className="w-3 h-3 md:w-4 md:h-4 text-accent animate-pulse" />
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-8xl font-black tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-tight">
             <span className="inline-block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
               Think Different.
             </span>
@@ -55,49 +55,49 @@ export const Hero = () => {
           </h1>
 
           {/* Subtext */}
-          <p className="text-xl md:text-3xl text-foreground/80 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-base sm:text-xl md:text-2xl lg:text-3xl text-foreground/80 max-w-4xl mx-auto leading-relaxed font-light px-2">
             We're not your typical security firm. We're <span className="font-bold text-primary">artists</span> who paint with code, 
             <span className="font-bold text-secondary"> strategists</span> who think like hackers, and 
             <span className="font-bold text-accent"> innovators</span> who turn threats into opportunities.
           </p>
 
           {/* CTA Button */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-6 md:pt-8">
             <Button 
               size="lg" 
-              className="group relative text-lg px-12 py-8 bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-[0_0_50px_rgba(168,85,247,0.6)] transition-all duration-500 overflow-hidden"
-              onClick={() => window.open('https://calendly.com', '_blank')}
+              className="group relative text-sm md:text-lg px-8 md:px-12 py-6 md:py-8 bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-[0_0_50px_rgba(168,85,247,0.6)] transition-all duration-500 overflow-hidden"
+              onClick={() => window.open('https://cal.com/cybrus-inc/call', '_blank')}
             >
-              <span className="relative z-10 flex items-center gap-3 font-bold">
+              <span className="relative z-10 flex items-center gap-2 md:gap-3 font-bold">
                 Let's Create Magic Together
-                <ArrowRight className="h-6 w-6 group-hover:translate-x-2 transition-transform" />
+                <ArrowRight className="h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-2 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-secondary via-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </Button>
           </div>
 
           {/* Trust Indicators */}
-          <div className="pt-12 flex flex-wrap justify-center gap-8 text-base">
-            <div className="group flex items-center gap-3 px-6 py-3 rounded-full bg-card/50 backdrop-blur-sm border border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300">
-              <div className="relative h-3 w-3">
+          <div className="pt-8 md:pt-12 flex flex-wrap justify-center gap-3 md:gap-8 text-sm md:text-base">
+            <div className="group flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 md:py-3 rounded-full bg-card/50 backdrop-blur-sm border border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300">
+              <div className="relative h-2 w-2 md:h-3 md:w-3">
                 <div className="absolute inset-0 rounded-full bg-primary animate-ping" />
-                <div className="relative h-3 w-3 rounded-full bg-primary" />
+                <div className="relative h-2 w-2 md:h-3 md:w-3 rounded-full bg-primary" />
               </div>
-              <span className="font-medium text-foreground">Creative Minds</span>
+              <span className="font-medium text-foreground text-xs md:text-base">Creative Minds</span>
             </div>
-            <div className="group flex items-center gap-3 px-6 py-3 rounded-full bg-card/50 backdrop-blur-sm border border-secondary/30 hover:border-secondary hover:bg-secondary/10 transition-all duration-300">
-              <div className="relative h-3 w-3">
+            <div className="group flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 md:py-3 rounded-full bg-card/50 backdrop-blur-sm border border-secondary/30 hover:border-secondary hover:bg-secondary/10 transition-all duration-300">
+              <div className="relative h-2 w-2 md:h-3 md:w-3">
                 <div className="absolute inset-0 rounded-full bg-secondary animate-ping" />
-                <div className="relative h-3 w-3 rounded-full bg-secondary" />
+                <div className="relative h-2 w-2 md:h-3 md:w-3 rounded-full bg-secondary" />
               </div>
-              <span className="font-medium text-foreground">Hacker Mindset</span>
+              <span className="font-medium text-foreground text-xs md:text-base">Hacker Mindset</span>
             </div>
-            <div className="group flex items-center gap-3 px-6 py-3 rounded-full bg-card/50 backdrop-blur-sm border border-accent/30 hover:border-accent hover:bg-accent/10 transition-all duration-300">
-              <div className="relative h-3 w-3">
+            <div className="group flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 md:py-3 rounded-full bg-card/50 backdrop-blur-sm border border-accent/30 hover:border-accent hover:bg-accent/10 transition-all duration-300">
+              <div className="relative h-2 w-2 md:h-3 md:w-3">
                 <div className="absolute inset-0 rounded-full bg-accent animate-ping" />
-                <div className="relative h-3 w-3 rounded-full bg-accent" />
+                <div className="relative h-2 w-2 md:h-3 md:w-3 rounded-full bg-accent" />
               </div>
-              <span className="font-medium text-foreground">Proactive Defense</span>
+              <span className="font-medium text-foreground text-xs md:text-base">Proactive Defense</span>
             </div>
           </div>
         </div>
