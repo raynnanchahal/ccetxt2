@@ -1,4 +1,4 @@
-import { Sparkles, Palette, Lightbulb, Rocket, Star, TrendingUp } from "lucide-react";
+import { Sparkles, Lightbulb, Rocket, TrendingUp } from "lucide-react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 export const SocialProof = () => {
@@ -7,15 +7,6 @@ export const SocialProof = () => {
     { icon: Rocket, value: "500+", label: "Brands Protected", color: "secondary" },
     { icon: Lightbulb, value: "Zero", label: "Standard Solutions", color: "accent" },
     { icon: TrendingUp, value: "10x", label: "Faster Response", color: "primary" },
-  ];
-
-  const logos = [
-    "YCombinator",
-    "Sequoia",
-    "a16z",
-    "Lightspeed",
-    "Accel",
-    "Greylock",
   ];
 
   const reviews = [
@@ -102,40 +93,9 @@ export const SocialProof = () => {
           </div>
         </div>
 
-        {/* Trusted By Section */}
-        <div className="max-w-6xl mx-auto text-center space-y-10 md:space-y-16">
-          <div className="space-y-4 md:space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 md:px-5 py-2 rounded-full bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 border border-primary/20">
-              <Star className="w-3 h-3 md:w-4 md:h-4 text-primary fill-primary" />
-              <span className="text-xs md:text-sm font-semibold text-foreground">Trusted by Innovators</span>
-            </div>
-            <h3 className="text-2xl md:text-3xl lg:text-5xl font-black text-foreground">
-              Where <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Visionaries</span> Trust Us
-            </h3>
-            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-              The world's most forward-thinking companies choose creative security over cookie-cutter solutions
-            </p>
-          </div>
-
-          {/* Logo Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
-            {logos.map((logo, index) => (
-              <div 
-                key={index}
-                className="group relative"
-              >
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative flex items-center justify-center h-16 md:h-24 px-4 md:px-8 rounded-xl md:rounded-2xl bg-card/60 backdrop-blur-xl border-2 border-border group-hover:border-primary/40 transition-all duration-300 transform group-hover:scale-105">
-                  <span className="text-sm md:text-xl font-bold bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent group-hover:from-primary group-hover:to-secondary transition-all duration-300">
-                    {logo}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Reviews Carousel */}
-          <div className="relative mt-12 md:mt-20">
+        {/* Reviews Section */}
+        <div className="max-w-6xl mx-auto">
+          <div className="relative">
             <div className="text-center mb-8 md:mb-10">
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4">
                 What <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Founders</span> Say

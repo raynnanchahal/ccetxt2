@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MessageCircle, MapPin } from "lucide-react";
+import { Mail, MessageCircle, MapPin, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -54,6 +54,12 @@ const Footer = () => {
                 <span className="text-sm text-muted-foreground">
                   Gurugram, India
                 </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Linkedin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <a href="https://in.linkedin.com/company/cybrusinc" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  LinkedIn
+                </a>
               </li>
             </ul>
           </div>

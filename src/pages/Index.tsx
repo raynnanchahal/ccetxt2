@@ -1,6 +1,5 @@
 import { Hero } from "@/components/Hero";
 import { SocialProof } from "@/components/SocialProof";
-import { VideoSection } from "@/components/VideoSection";
 import { CTASection } from "@/components/CTASection";
 import { InlineCTA } from "@/components/InlineCTA";
 import Navigation from "@/components/Navigation";
@@ -11,8 +10,6 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <InlineCTA />
-      <VideoSection />
       <InlineCTA />
       <SocialProof />
       <InlineCTA />
