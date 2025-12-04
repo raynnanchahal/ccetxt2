@@ -49,20 +49,18 @@ export const CTASection = () => {
                 </div>
 
                 {/* CTA Button */}
-                <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-4 md:pt-8">
+                <div className="flex justify-center pt-4 md:pt-8">
                   <Button 
                     size="lg" 
-                    className="group relative text-base md:text-xl px-8 md:px-14 py-6 md:py-10 bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-[0_0_60px_rgba(168,85,247,0.8)] transition-all duration-500 overflow-hidden transform hover:scale-105"
+                    className="group relative bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition-all duration-300 overflow-hidden font-bold px-8 py-6 text-base"
                     onClick={() => window.open('https://cal.com/cybrus-inc/call', '_blank')}
                   >
-                    <span className="relative z-10 flex items-center gap-2 md:gap-4 font-black">
-                      <Calendar className="h-5 w-5 md:h-6 md:w-6" />
-                      <span className="hidden sm:inline">Start Your Creative Journey</span>
-                      <span className="sm:hidden">Book a Call</span>
-                      <ArrowRight className="h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-2 transition-transform duration-300" />
+                    <span className="relative z-10 flex items-center gap-2">
+                      <Calendar className="h-5 w-5" />
+                      Start Your Creative Journey
+                      <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-accent via-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent blur-xl opacity-50 group-hover:opacity-100 transition-opacity" />
                   </Button>
                 </div>
 

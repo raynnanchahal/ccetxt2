@@ -1,7 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { SocialProof } from "@/components/SocialProof";
+import { WhatToExpect } from "@/components/WhatToExpect";
 import { CTASection } from "@/components/CTASection";
-import { InlineCTA } from "@/components/InlineCTA";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -10,9 +10,8 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <InlineCTA />
+      <WhatToExpect />
       <SocialProof />
-      <InlineCTA />
       <CTASection />
       <Footer />
     </div>
