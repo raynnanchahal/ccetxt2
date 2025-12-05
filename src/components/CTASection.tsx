@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight, Sparkles, Zap, Star } from "lucide-react";
+import { Calendar, ArrowRight, Target } from "lucide-react";
 
 export const CTASection = () => {
   return (
@@ -28,23 +28,21 @@ export const CTASection = () => {
                 {/* Animated Icon */}
                 <div className="inline-flex items-center justify-center w-14 h-14 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 border-2 border-primary/30 group-hover:scale-110 transition-transform duration-300">
                   <div className="relative">
-                    <Sparkles className="h-7 w-7 md:h-10 md:w-10 text-primary animate-pulse" />
+                    <Target className="h-7 w-7 md:h-10 md:w-10 text-primary animate-pulse" />
                     <div className="absolute inset-0 bg-primary/50 rounded-full blur-xl" />
                   </div>
                 </div>
 
                 {/* Headline */}
                 <div className="space-y-4 md:space-y-6">
-                  <h2 className="text-3xl md:text-5xl lg:text-7xl font-black leading-tight">
-                    Let's <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Create</span>
-                    <br />
-                    Something <span className="relative inline-block">
-                      <span className="relative z-10 bg-gradient-to-r from-accent via-primary to-secondary bg-clip-text text-transparent">Brilliant</span>
-                      <span className="absolute inset-0 bg-gradient-to-r from-accent/30 to-primary/30 blur-2xl" />
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black leading-tight">
+                    See What Your{" "}
+                    <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                      Scanners Are Missing
                     </span>
                   </h2>
                   <p className="text-base md:text-xl lg:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed px-2">
-                    Stop settling for boring security. Let's craft a defense strategy as unique and creative as your business.
+                    Every product has blind spots. We'll show you exactly where real attackers would strike first.
                   </p>
                 </div>
 
@@ -57,27 +55,11 @@ export const CTASection = () => {
                   >
                     <span className="relative z-10 flex items-center gap-2">
                       <Calendar className="h-5 w-5" />
-                      Start Your Creative Journey
+                      Book Your Strategy Call
                       <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-accent via-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </Button>
-                </div>
-
-                {/* Trust Elements */}
-                <div className="pt-6 md:pt-10 flex flex-wrap justify-center gap-3 md:gap-8 text-xs md:text-base">
-                  <div className="flex items-center gap-2 md:gap-3 px-3 md:px-5 py-2 md:py-3 rounded-full bg-card/50 border border-primary/20 backdrop-blur-sm">
-                    <Star className="h-3 w-3 md:h-4 md:w-4 text-primary fill-primary" />
-                    <span className="font-medium text-foreground">Free Creative Audit</span>
-                  </div>
-                  <div className="flex items-center gap-2 md:gap-3 px-3 md:px-5 py-2 md:py-3 rounded-full bg-card/50 border border-secondary/20 backdrop-blur-sm">
-                    <Zap className="h-3 w-3 md:h-4 md:w-4 text-secondary" />
-                    <span className="font-medium text-foreground">45-Min Deep Dive</span>
-                  </div>
-                  <div className="flex items-center gap-2 md:gap-3 px-3 md:px-5 py-2 md:py-3 rounded-full bg-card/50 border border-accent/20 backdrop-blur-sm">
-                    <Sparkles className="h-3 w-3 md:h-4 md:w-4 text-accent" />
-                    <span className="font-medium text-foreground">Custom Strategy</span>
-                  </div>
                 </div>
               </div>
               
@@ -90,7 +72,7 @@ export const CTASection = () => {
           {/* Bottom Text */}
           <div className="mt-10 md:mt-16 text-center space-y-4 md:space-y-6">
             <p className="text-base md:text-2xl text-foreground/70 font-light px-4">
-              Join the <span className="font-bold text-primary">creative revolution</span> in cybersecurity
+              Stop hoping. <span className="font-bold text-primary">Start knowing.</span>
             </p>
             <div className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 md:py-3 rounded-full bg-card/60 backdrop-blur-sm border border-primary/30">
               <span className="relative flex h-2 w-2 md:h-3 md:w-3">
