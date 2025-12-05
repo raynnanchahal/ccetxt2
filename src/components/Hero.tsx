@@ -30,7 +30,7 @@ export const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="max-w-5xl mx-auto space-y-8 animate-fade-in">
+        <div className="max-w-4xl mx-auto space-y-6 animate-fade-in">
           {/* Warning Badge */}
           <div className="inline-flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 rounded-full bg-destructive/10 border border-destructive/30 backdrop-blur-xl shadow-lg">
             <AlertTriangle className="w-3 h-3 md:w-4 md:h-4 text-destructive animate-pulse" />
@@ -40,28 +40,26 @@ export const Hero = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-tight">
-            <span className="inline-block text-foreground">
-              You're One Overlooked
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+            <span className="text-foreground">
+              You're One Overlooked Vulnerability
             </span>
             <br />
-            <span className="inline-block text-foreground">
-              Vulnerability Away From{" "}
-            </span>
-            <span className="inline-block bg-gradient-to-r from-destructive via-primary to-secondary bg-clip-text text-transparent">
+            <span className="text-foreground">Away From </span>
+            <span className="bg-gradient-to-r from-destructive via-primary to-secondary bg-clip-text text-transparent">
               a Breach
             </span>
           </h1>
 
           {/* Subtext */}
-          <p className="text-base sm:text-xl md:text-2xl text-foreground/70 max-w-4xl mx-auto leading-relaxed font-light px-2">
+          <p className="text-lg md:text-xl lg:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
             Scanners won't warn you. Automation won't detect it.
-            <br className="hidden md:block" />
+            <br className="hidden sm:block" />
             <span className="font-semibold text-foreground/90">Creative attackers will find it</span> — and they only need one gap.
           </p>
 
           {/* CTA Button */}
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-6 md:pt-8">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-4">
             <Button 
               size="lg" 
               className="group relative bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition-all duration-300 overflow-hidden font-bold px-8 py-6 text-base"

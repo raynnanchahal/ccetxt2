@@ -7,40 +7,43 @@ export const DiagnosisBlock = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-accent/5 to-background" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center space-y-8">
+        <div className="max-w-2xl mx-auto space-y-8">
           {/* Headline */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
             Why Most Security Teams{" "}
             <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
               Still Miss Critical Vulnerabilities
             </span>
           </h2>
 
-          {/* Body */}
-          <div className="space-y-6 text-base md:text-lg text-foreground/80 leading-relaxed">
+          {/* Body - Left Aligned */}
+          <div className="space-y-5 text-base md:text-lg text-foreground/80 leading-relaxed text-left">
             <p>
               Most teams are overworked, drowning in procedures, and judged on <span className="font-semibold text-foreground">volume — not intelligence.</span>
             </p>
             
-            <div className="py-4 space-y-2">
-              <p className="text-foreground/70">Their KPI becomes:</p>
-              <p className="text-xl md:text-2xl text-muted-foreground italic">
-                "How many scans did we run?"
-              </p>
-              <p className="text-foreground/70">Instead of:</p>
-              <p className="text-xl md:text-2xl font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                "Did we find the one thing that could actually take us out?"
-              </p>
+            <div className="py-4 pl-4 border-l-2 border-primary/30 space-y-4">
+              <div>
+                <p className="text-foreground/60 text-sm uppercase tracking-wide mb-1">Their KPI becomes:</p>
+                <p className="text-lg md:text-xl text-muted-foreground italic">
+                  "How many scans did we run?"
+                </p>
+              </div>
+              <div>
+                <p className="text-foreground/60 text-sm uppercase tracking-wide mb-1">Instead of:</p>
+                <p className="text-lg md:text-xl font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  "Did we find the one thing that could actually take us out?"
+                </p>
+              </div>
             </div>
 
-            <p className="pt-4">
-              And while everyone's busy ticking boxes…<br />
-              <span className="font-semibold text-foreground">creative attackers stroll through the gaps.</span>
+            <p>
+              And while everyone's busy ticking boxes… <span className="font-semibold text-foreground">creative attackers stroll through the gaps.</span>
             </p>
           </div>
 
           {/* CTA */}
-          <div className="pt-4">
+          <div className="pt-4 text-center">
             <Button 
               size="lg"
               className="group bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition-all duration-300 font-bold px-8 py-6 text-base"
