@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Zap } from "lucide-react";
+import { ArrowRight, AlertTriangle } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -31,34 +31,33 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-5xl mx-auto space-y-8 animate-fade-in">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 rounded-full bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 border border-primary/30 backdrop-blur-xl shadow-lg hover:shadow-primary/20 transition-all duration-300">
-            <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-primary animate-pulse" />
-            <span className="text-xs md:text-sm font-semibold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              Where Creativity Meets Cybersecurity
+          {/* Warning Badge */}
+          <div className="inline-flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 rounded-full bg-destructive/10 border border-destructive/30 backdrop-blur-xl shadow-lg">
+            <AlertTriangle className="w-3 h-3 md:w-4 md:h-4 text-destructive animate-pulse" />
+            <span className="text-xs md:text-sm font-semibold text-destructive">
+              Security Alert
             </span>
-            <Zap className="w-3 h-3 md:w-4 md:h-4 text-accent animate-pulse" />
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-tight">
-            <span className="inline-block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
-              Think Different.
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-tight">
+            <span className="inline-block text-foreground">
+              You're One Overlooked
             </span>
             <br />
-            <span className="inline-block text-foreground mt-2">
-              Defend <span className="relative inline-block">
-                <span className="relative z-10">Smarter</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30 blur-xl" />
-              </span>.
+            <span className="inline-block text-foreground">
+              Vulnerability Away From{" "}
+            </span>
+            <span className="inline-block bg-gradient-to-r from-destructive via-primary to-secondary bg-clip-text text-transparent">
+              a Breach
             </span>
           </h1>
 
           {/* Subtext */}
-          <p className="text-base sm:text-xl md:text-2xl lg:text-3xl text-foreground/80 max-w-4xl mx-auto leading-relaxed font-light px-2">
-            We're not your typical security firm. We're <span className="font-bold text-primary">artists</span> who paint with code, 
-            <span className="font-bold text-secondary"> strategists</span> who think like hackers, and 
-            <span className="font-bold text-accent"> innovators</span> who turn threats into opportunities.
+          <p className="text-base sm:text-xl md:text-2xl text-foreground/70 max-w-4xl mx-auto leading-relaxed font-light px-2">
+            Scanners won't warn you. Automation won't detect it.
+            <br className="hidden md:block" />
+            <span className="font-semibold text-foreground/90">Creative attackers will find it</span> — and they only need one gap.
           </p>
 
           {/* CTA Button */}
@@ -69,36 +68,11 @@ export const Hero = () => {
               onClick={() => window.open('https://cal.com/cybrus-inc/call', '_blank')}
             >
               <span className="relative z-10 flex items-center gap-2">
-                Let's Create Magic Together
+                Book Your Strategy Call
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-secondary via-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </Button>
-          </div>
-
-          {/* Trust Indicators */}
-          <div className="pt-8 md:pt-12 flex flex-wrap justify-center gap-3 md:gap-8 text-sm md:text-base">
-            <div className="group flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 md:py-3 rounded-full bg-card/50 backdrop-blur-sm border border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300">
-              <div className="relative h-2 w-2 md:h-3 md:w-3">
-                <div className="absolute inset-0 rounded-full bg-primary animate-ping" />
-                <div className="relative h-2 w-2 md:h-3 md:w-3 rounded-full bg-primary" />
-              </div>
-              <span className="font-medium text-foreground text-xs md:text-base">Creative Minds</span>
-            </div>
-            <div className="group flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 md:py-3 rounded-full bg-card/50 backdrop-blur-sm border border-secondary/30 hover:border-secondary hover:bg-secondary/10 transition-all duration-300">
-              <div className="relative h-2 w-2 md:h-3 md:w-3">
-                <div className="absolute inset-0 rounded-full bg-secondary animate-ping" />
-                <div className="relative h-2 w-2 md:h-3 md:w-3 rounded-full bg-secondary" />
-              </div>
-              <span className="font-medium text-foreground text-xs md:text-base">Hacker Mindset</span>
-            </div>
-            <div className="group flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 md:py-3 rounded-full bg-card/50 backdrop-blur-sm border border-accent/30 hover:border-accent hover:bg-accent/10 transition-all duration-300">
-              <div className="relative h-2 w-2 md:h-3 md:w-3">
-                <div className="absolute inset-0 rounded-full bg-accent animate-ping" />
-                <div className="relative h-2 w-2 md:h-3 md:w-3 rounded-full bg-accent" />
-              </div>
-              <span className="font-medium text-foreground text-xs md:text-base">Proactive Defense</span>
-            </div>
           </div>
         </div>
       </div>
