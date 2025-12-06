@@ -1,16 +1,16 @@
-// Restore real route after GitHub Pages redirect
 (() => {
   const url = new URL(window.location.href);
   const p = url.searchParams.get("p");
+
   if (p) {
+    // Remove the ?p= param
     url.searchParams.delete("p");
-    window.history.replaceState({}, "", p);
+
+    // Ensure correct base for GitHub Pages repo hosting
+    const corrected = p.startsWith("/ccetxt2/")
+      ? p
+      : "/ccetxt2" + (p.startsWith("/") ? p : "/" + p);
+
+    window.history.replaceState({}, "", corrected);
   }
 })();
-
-
-import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
-
-createRoot(document.getElementById("root")!).render(<App />);
