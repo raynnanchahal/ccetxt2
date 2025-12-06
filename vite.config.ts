@@ -9,6 +9,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Required for custom root domain (no /repo-name/)
-  base: "/",
+  // IMPORTANT: because GitHub Pages uses
+  // https://username.github.io/repo-name/
+  base: "/ccetxt2/",
 });
