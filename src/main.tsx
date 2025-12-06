@@ -4,14 +4,12 @@
   const p = url.searchParams.get("p");
 
   if (p) {
+    // Remove ?p=
     url.searchParams.delete("p");
 
-    const corrected =
-      p.startsWith("/ccetxt2/")
-        ? p
-        : "/ccetxt2" + (p.startsWith("/") ? p : "/" + p);
-
-    window.history.replaceState({}, "", corrected);
+    // On root domain, we do NOT prefix anything.
+    // The p value already contains the full correct path.
+    window.history.replaceState({}, "", p);
   }
 })();
 
