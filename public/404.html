@@ -7,11 +7,10 @@
       (function () {
         var l = window.location;
 
-        // IMPORTANT: MUST MATCH YOUR REPO NAME
+        // For root-domain GitHub Pages, do NOT prefix anything.
+        // Just pass the original path as ?p=<path>.
         var redirect =
-          "/ccetxt2/" +
-          "?p=" +
-          encodeURIComponent(l.pathname + l.search + l.hash);
+          "/?p=" + encodeURIComponent(l.pathname + l.search + l.hash);
 
         window.location.replace(redirect);
       })();
@@ -19,3 +18,4 @@
   </head>
   <body>Redirecting…</body>
 </html>
+
