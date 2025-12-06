@@ -4,10 +4,15 @@
     <meta charset="utf-8" />
     <title>Redirecting…</title>
     <script>
-      // GitHub Pages SPA redirect fix
       (function () {
         var l = window.location;
-        var redirect = "/ccetxt2/" + "?p=" + encodeURIComponent(l.pathname + l.search + l.hash);
+
+        // IMPORTANT: MUST MATCH YOUR REPO NAME
+        var redirect =
+          "/ccetxt2/" +
+          "?p=" +
+          encodeURIComponent(l.pathname + l.search + l.hash);
+
         window.location.replace(redirect);
       })();
     </script>
