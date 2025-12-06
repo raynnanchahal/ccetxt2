@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      // GitHub Pages SPA redirect fix
+      (function () {
+        var l = window.location;
+        var redirect = "/" + "?p=" + encodeURIComponent(l.pathname + l.search + l.hash);
+        window.location.replace(redirect);
+      })();
+    </script>
+  </head>
+  <body>Redirecting…</body>
+</html>
