@@ -3,35 +3,35 @@ import { ArrowRight } from "lucide-react";
 
 export const DiagnosisBlock = () => {
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
+    <section className="py-12 md:py-20 lg:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-accent/5 to-background" />
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-2xl mx-auto space-y-8">
+      <div className="container mx-auto px-5 md:px-6 relative z-10">
+        <div className="max-w-2xl mx-auto">
           {/* Headline */}
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center leading-tight mb-8 md:mb-10">
             Why Most Security Teams{" "}
             <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
               Still Miss Critical Vulnerabilities
             </span>
           </h2>
 
-          {/* Body - Left Aligned */}
-          <div className="space-y-5 text-base md:text-lg text-foreground/80 leading-relaxed text-left">
+          {/* Body */}
+          <div className="space-y-4 md:space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed mb-8 md:mb-10">
             <p>
               Most teams are overworked, drowning in procedures, and judged on <span className="font-semibold text-foreground">volume — not intelligence.</span>
             </p>
             
-            <div className="py-4 pl-4 border-l-2 border-primary/30 space-y-4">
+            <div className="py-4 md:py-5 pl-4 md:pl-5 border-l-2 border-primary/30 space-y-4">
               <div>
-                <p className="text-foreground/60 text-sm uppercase tracking-wide mb-1">Their KPI becomes:</p>
-                <p className="text-lg md:text-xl text-muted-foreground italic">
+                <p className="text-muted-foreground text-xs md:text-sm uppercase tracking-wide mb-1">Their KPI becomes:</p>
+                <p className="text-base md:text-lg text-muted-foreground italic">
                   "How many scans did we run?"
                 </p>
               </div>
               <div>
-                <p className="text-foreground/60 text-sm uppercase tracking-wide mb-1">Instead of:</p>
-                <p className="text-lg md:text-xl font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <p className="text-muted-foreground text-xs md:text-sm uppercase tracking-wide mb-1">Instead of:</p>
+                <p className="text-base md:text-lg font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   "Did we find the one thing that could actually take us out?"
                 </p>
               </div>
@@ -43,15 +43,15 @@ export const DiagnosisBlock = () => {
           </div>
 
           {/* CTA */}
-          <div className="pt-4 text-center">
+          <div className="flex justify-center">
             <Button 
               size="lg"
-              className="group bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition-all duration-300 font-bold px-8 py-6 text-base"
+              className="group bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-[0_0_40px_hsl(var(--primary)/0.5)] transition-all duration-300 font-bold px-6 md:px-8 py-5 md:py-6 text-sm md:text-base w-full sm:w-auto"
               onClick={() => window.open('https://cal.com/cybrus-inc/call', '_blank')}
             >
-              <span className="flex items-center gap-2">
+              <span className="flex items-center justify-center gap-2">
                 Protect Your Product
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </Button>
           </div>

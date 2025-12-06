@@ -26,39 +26,45 @@ export const CybrusDifference = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
+    <section className="py-12 md:py-20 lg:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-5xl mx-auto">
+      {/* Decorative Orbs - Hidden on mobile */}
+      <div className="hidden md:block absolute top-1/4 left-10 w-48 h-48 bg-primary/10 rounded-full blur-3xl" />
+      <div className="hidden md:block absolute bottom-1/4 right-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-5 md:px-6 relative z-10">
+        <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12 md:mb-16 space-y-4">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black">
-              What Makes{" "}
+          <div className="text-center mb-10 md:mb-14">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+              What Makes Cybrus{" "}
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                Cybrus Different
+                Different
               </span>
             </h2>
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-12">
-            {features.map((item, idx) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-10 md:mb-12">
+            {features.map((feature, idx) => (
               <div 
-                key={idx} 
+                key={idx}
                 className="group relative"
               >
-                {/* Hover Glow */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                <div className="relative p-6 rounded-xl bg-card/50 backdrop-blur-sm border border-border hover:border-primary/40 transition-all duration-300">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative p-5 md:p-6 rounded-xl bg-card/60 backdrop-blur-sm border border-border group-hover:border-primary/40 transition-all duration-300 h-full">
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/10 border border-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <item.icon className="w-6 h-6 text-primary" />
+                    <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/10 border border-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <feature.icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                     </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base md:text-lg font-bold text-foreground mb-1.5">
+                        {feature.title}
+                      </h3>
+                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                        {feature.description}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -67,15 +73,15 @@ export const CybrusDifference = () => {
           </div>
 
           {/* CTA */}
-          <div className="text-center">
+          <div className="flex justify-center">
             <Button 
               size="lg"
-              className="group bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition-all duration-300 font-bold px-8 py-6 text-base"
+              className="group bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-[0_0_40px_hsl(var(--primary)/0.5)] transition-all duration-300 font-bold px-6 md:px-8 py-5 md:py-6 text-sm md:text-base w-full sm:w-auto"
               onClick={() => window.open('https://cal.com/cybrus-inc/call', '_blank')}
             >
-              <span className="flex items-center gap-2">
+              <span className="flex items-center justify-center gap-2">
                 Work With Creative Security Experts
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </Button>
           </div>

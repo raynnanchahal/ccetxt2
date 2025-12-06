@@ -3,21 +3,21 @@ import { ArrowRight, AlertTriangle } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-primary/5 to-background">
-      {/* Animated Gradient Orbs */}
-      <div className="absolute top-20 left-10 w-48 md:w-96 h-48 md:h-96 bg-primary/30 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-64 md:w-[500px] h-64 md:h-[500px] bg-secondary/20 rounded-full blur-3xl animate-pulse delay-700" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 md:w-[600px] h-72 md:h-[600px] bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000" />
+    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-primary/5 to-background pt-16 md:pt-20">
+      {/* Animated Gradient Orbs - Smaller on mobile */}
+      <div className="absolute top-20 left-4 md:left-10 w-32 md:w-72 h-32 md:h-72 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-20 right-4 md:right-10 w-40 md:w-96 h-40 md:h-96 bg-secondary/15 rounded-full blur-3xl animate-pulse delay-700" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 md:w-[500px] h-48 md:h-[500px] bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000" />
       
-      {/* Floating Elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* Floating Elements - Hidden on mobile */}
+      <div className="hidden md:block absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-ping" />
         <div className="absolute top-3/4 right-1/4 w-2 h-2 bg-secondary rounded-full animate-ping delay-500" />
         <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-accent rounded-full animate-ping delay-1000" />
       </div>
 
-      {/* Geometric Pattern */}
-      <div className="absolute inset-0 opacity-20">
+      {/* Geometric Pattern - Lower opacity on mobile */}
+      <div className="absolute inset-0 opacity-10 md:opacity-20">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
@@ -29,45 +29,44 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto space-y-6 animate-fade-in">
+      <div className="relative z-10 container mx-auto px-5 md:px-6">
+        <div className="max-w-3xl mx-auto space-y-6 md:space-y-8 animate-fade-in">
           {/* Warning Badge */}
-          <div className="inline-flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 rounded-full bg-destructive/10 border border-destructive/30 backdrop-blur-xl shadow-lg">
-            <AlertTriangle className="w-3 h-3 md:w-4 md:h-4 text-destructive animate-pulse" />
-            <span className="text-xs md:text-sm font-semibold text-destructive">
-              Security Alert
-            </span>
+          <div className="flex justify-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-destructive/10 border border-destructive/30 backdrop-blur-xl">
+              <AlertTriangle className="w-4 h-4 text-destructive animate-pulse" />
+              <span className="text-xs md:text-sm font-semibold text-destructive">
+                Security Alert
+              </span>
+            </div>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.15] text-center">
             <span className="text-foreground">
-              You're One Overlooked Vulnerability
+              You're One Overlooked Vulnerability Away From{" "}
             </span>
-            <br />
-            <span className="text-foreground">Away From </span>
             <span className="bg-gradient-to-r from-destructive via-primary to-secondary bg-clip-text text-transparent">
               a Breach
             </span>
           </h1>
 
           {/* Subtext */}
-          <p className="text-lg md:text-xl lg:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-            Scanners won't warn you. Automation won't detect it.
-            <br className="hidden sm:block" />
-            <span className="font-semibold text-foreground/90">Creative attackers will find it</span> — and they only need one gap.
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed text-center max-w-2xl mx-auto">
+            Scanners won't warn you. Automation won't detect it.{" "}
+            <span className="font-semibold text-foreground">Creative attackers will find it</span> — and they only need one gap.
           </p>
 
           {/* CTA Button */}
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-4">
+          <div className="flex justify-center pt-2 md:pt-4">
             <Button 
               size="lg" 
-              className="group relative bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition-all duration-300 overflow-hidden font-bold px-8 py-6 text-base"
+              className="group relative bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-[0_0_40px_hsl(var(--primary)/0.5)] transition-all duration-300 overflow-hidden font-bold px-6 md:px-8 py-5 md:py-6 text-sm md:text-base w-full sm:w-auto"
               onClick={() => window.open('https://cal.com/cybrus-inc/call', '_blank')}
             >
-              <span className="relative z-10 flex items-center gap-2">
+              <span className="relative z-10 flex items-center justify-center gap-2">
                 Book Your Strategy Call
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-secondary via-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </Button>
@@ -76,7 +75,7 @@ export const Hero = () => {
       </div>
 
       {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/50 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 md:h-40 bg-gradient-to-t from-background via-background/50 to-transparent" />
     </section>
   );
 };
