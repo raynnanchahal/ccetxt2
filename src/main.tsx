@@ -16,9 +16,13 @@
 })();
 
 // -----------------------
+// REQUIRED CSS IMPORT
+// -----------------------
+import "./index.css";
+
+// -----------------------
 // REQUIRED REACT ENTRY
 // -----------------------
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
