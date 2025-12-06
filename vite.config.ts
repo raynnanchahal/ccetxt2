@@ -11,5 +11,5 @@ export default defineConfig({
   },
   // IMPORTANT: because GitHub Pages uses
   // https://username.github.io/repo-name/
-  base: "/ccetxt2/",
+  base: "/",
 });
