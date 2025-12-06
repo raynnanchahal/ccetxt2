@@ -3,24 +3,24 @@ import { ArrowRight, AlertCircle } from "lucide-react";
 
 export const ColdOpenStory = () => {
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
+    <section className="py-12 md:py-20 lg:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
       
       {/* Subtle Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-destructive/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-destructive/5 rounded-full blur-3xl" />
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-2xl mx-auto space-y-8">
+      <div className="container mx-auto px-5 md:px-6 relative z-10">
+        <div className="max-w-2xl mx-auto">
           {/* Headline */}
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-10">
             The Breach{" "}
             <span className="bg-gradient-to-r from-destructive to-primary bg-clip-text text-transparent">
               No Scanner Could Predict
             </span>
           </h2>
 
-          {/* Story Body - Left Aligned */}
-          <div className="space-y-5 text-base md:text-lg text-foreground/80 leading-relaxed text-left">
+          {/* Story Body */}
+          <div className="space-y-4 md:space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed mb-8 md:mb-10">
             <p>
               A SaaS team came to us recently — <span className="font-semibold text-foreground">totally blindsided.</span>
             </p>
@@ -33,8 +33,8 @@ export const ColdOpenStory = () => {
           </div>
 
           {/* Impact List */}
-          <div className="bg-card/50 backdrop-blur-sm border border-destructive/20 rounded-xl p-6 md:p-8 space-y-4">
-            <p className="text-foreground font-semibold text-lg">Within hours:</p>
+          <div className="bg-card/50 backdrop-blur-sm border border-destructive/20 rounded-xl p-5 md:p-8 mb-6 md:mb-8">
+            <p className="text-foreground font-semibold text-base md:text-lg mb-4">Within hours:</p>
             <div className="space-y-3">
               {[
                 "Customer accounts were compromised",
@@ -44,26 +44,26 @@ export const ColdOpenStory = () => {
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <AlertCircle className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
-                  <span className="text-base md:text-lg text-foreground/80">{item}</span>
+                  <span className="text-base md:text-lg text-muted-foreground">{item}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <p className="text-base md:text-lg text-foreground/70 italic text-left">
+          <p className="text-base md:text-lg text-muted-foreground italic mb-8 md:mb-10">
             All from one creative attack path nobody thought to check.
           </p>
 
           {/* CTA */}
-          <div className="pt-4 text-center">
+          <div className="flex justify-center">
             <Button 
               size="lg"
-              className="group bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition-all duration-300 font-bold px-8 py-6 text-base"
+              className="group bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-[0_0_40px_hsl(var(--primary)/0.5)] transition-all duration-300 font-bold px-6 md:px-8 py-5 md:py-6 text-sm md:text-base w-full sm:w-auto"
               onClick={() => window.open('https://cal.com/cybrus-inc/call', '_blank')}
             >
-              <span className="flex items-center gap-2">
+              <span className="flex items-center justify-center gap-2">
                 See Your Hidden Blind Spots
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </Button>
           </div>
