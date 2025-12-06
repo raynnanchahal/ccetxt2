@@ -26,8 +26,8 @@ const App = () => (
       <Toaster />
       <Sonner />
 
-      {/* IMPORTANT FOR GITHUB PAGES */}
-      <BrowserRouter basename="/ccetxt2">
+      {/* Root domain → NO BASENAME */}
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
@@ -42,7 +42,7 @@ const App = () => (
           <Route path="/refund-cancellation-policy" element={<RefundCancellationPolicy />} />
           <Route path="/thank-you" element={<ThankYou />} />
 
-          {/* MUST stay last */}
+          {/* Catch-all route stays last */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
